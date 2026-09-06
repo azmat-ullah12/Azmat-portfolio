@@ -3,20 +3,16 @@
 @tailwind utilities;
 
 :root {
-  --dark: #101114;
-  --black: #09090B;
-  --navy: #101114;
-  --off-white: #F7F7F5;
-  --soft-gray: #E5E5E3;
-  --mid-gray: #71717A;
-  --purple: #7C3AED;
-  --purple-deep: #5B21B6;
-  --purple-bright: #8B5CF6;
-  --purple-soft: #EDE9FE;
-  --purple-very-soft: #F5F3FF;
-  /* Backward compat aliases */
-  --accent-blue: #7C3AED;
-  --accent-teal: #7C3AED;
+  --deep-bg: #0D0717;
+  --secondary-bg: #160D24;
+  --surface-card: #130A21;
+  --surface-border: #26173B;
+  --primary-purple: #7C3AED;
+  --bright-purple: #8B5CF6;
+  --soft-purple: #A78BFA;
+  --lavender: #EDE9FE;
+  --white: #FFFFFF;
+  --muted-text: #A1A1AA;
 }
 
 html {
@@ -26,10 +22,15 @@ html {
 
 body {
   font-family: var(--font-inter), system-ui, sans-serif;
-  background-color: #FFFFFF;
-  color: var(--dark);
+  background-color: #0D0717;
+  color: #A1A1AA;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+/* Headings default white */
+h1, h2, h3, h4, h5, h6 {
+  color: #FFFFFF;
 }
 
 /* Reduced motion */
@@ -59,33 +60,42 @@ body {
 
 /* Custom scrollbar */
 ::-webkit-scrollbar {
-  width: 5px;
+  width: 6px;
 }
 ::-webkit-scrollbar-track {
-  background: transparent;
+  background: #0D0717;
 }
 ::-webkit-scrollbar-thumb {
-  background: #d4d4d8;
+  background: #26173B;
   border-radius: 3px;
 }
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--mid-gray);
+  background: #7C3AED;
 }
 
 /* Selection — purple */
 ::selection {
-  background-color: var(--purple);
-  color: white;
+  background-color: #7C3AED;
+  color: #FFFFFF;
 }
 
 /* Focus visible — purple */
 *:focus-visible {
-  outline: 2px solid var(--purple);
+  outline: 2px solid #8B5CF6;
   outline-offset: 2px;
-  border-radius: 2px;
+  border-radius: 4px;
 }
 
 /* Editorial separator */
 .editorial-divider {
-  @apply w-full h-px bg-soft-gray/60;
+  @apply w-full h-px bg-[#26173B];
+}
+
+/* Subtle background ambient lighting */
+.purple-glow-ambient {
+  background: radial-gradient(circle at 50% 0%, rgba(124, 58, 237, 0.12) 0%, rgba(13, 7, 23, 0) 70%);
+}
+
+.purple-card-glow {
+  box-shadow: 0 0 40px -10px rgba(124, 58, 237, 0.12);
 }

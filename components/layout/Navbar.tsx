@@ -48,11 +48,11 @@ export default function Navbar() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 h-16 flex items-center ${
-        isScrolled ? 'bg-white/80 backdrop-blur-xl border-b border-[#E5E5E3]/50' : 'bg-transparent'
+        isScrolled ? 'bg-[#0D0717]/85 backdrop-blur-xl border-b border-[#26173B]' : 'bg-transparent'
       }`}
     >
       <div className="w-full max-w-[1360px] mx-auto px-6 md:px-12 flex items-center justify-between">
-        <a href="#home" className="font-heading text-sm font-bold tracking-tight uppercase text-[#101114]">
+        <a href="#home" className="font-heading text-sm font-bold tracking-tight uppercase text-white hover:text-[#A78BFA] transition-colors">
           {personalInfo.name}
         </a>
 
@@ -62,13 +62,13 @@ export default function Navbar() {
             <a
               key={item.label}
               href={item.href}
-              className="relative text-[13px] font-medium text-[#71717A] hover:text-[#101114] transition-colors py-2"
+              className="relative text-[13px] font-medium text-[#A1A1AA] hover:text-white transition-colors py-2"
             >
               {item.label}
               {activeSection === item.href.substring(1) && (
                 <motion.div
                   layoutId="activeNavIndicator"
-                  className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#7C3AED]"
+                  className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-1 h-1 rounded-full bg-[#8B5CF6] shadow-[0_0_8px_#8B5CF6]"
                 />
               )}
             </a>
@@ -80,14 +80,14 @@ export default function Navbar() {
             href={personalInfo.cvUrl || '#'}
             target="_blank"
             rel="noopener noreferrer"
-            className="flex items-center gap-1.5 text-[13px] font-medium text-[#71717A] hover:text-[#101114] transition-colors"
+            className="flex items-center gap-1.5 text-[13px] font-medium text-[#A1A1AA] hover:text-white transition-colors"
           >
             <Download className="w-3.5 h-3.5" />
             CV
           </a>
           <a
             href="#contact"
-            className="bg-[#7C3AED] text-white text-[13px] font-medium px-5 py-2 rounded-md hover:bg-[#5B21B6] transition-colors"
+            className="bg-[#7C3AED] text-white text-[13px] font-medium px-5 py-2 rounded-md hover:bg-[#5B21B6] transition-all duration-300 shadow-[0_0_20px_-3px_rgba(124,58,237,0.4)]"
           >
             Let's Talk
           </a>
@@ -95,7 +95,7 @@ export default function Navbar() {
 
         {/* Mobile Toggle */}
         <button
-          className="md:hidden text-[#101114] p-1 -mr-1"
+          className="md:hidden text-white p-1 -mr-1"
           onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           aria-label="Toggle Menu"
         >
@@ -110,7 +110,7 @@ export default function Navbar() {
             initial={{ opacity: 0, y: -10 }}
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -10 }}
-            className="absolute top-16 left-0 right-0 h-[calc(100vh-4rem)] bg-white border-t border-[#E5E5E3]/50 p-6 flex flex-col md:hidden"
+            className="absolute top-16 left-0 right-0 h-[calc(100vh-4rem)] bg-[#0D0717] border-t border-[#26173B] p-6 flex flex-col md:hidden"
           >
             <div className="flex flex-col space-y-6 mt-8">
               {navItems.map((item, i) => (
@@ -122,7 +122,7 @@ export default function Navbar() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: i * 0.05 }}
                   className={`text-2xl font-heading font-semibold ${
-                    activeSection === item.href.substring(1) ? 'text-[#7C3AED]' : 'text-[#101114]'
+                    activeSection === item.href.substring(1) ? 'text-[#8B5CF6]' : 'text-white'
                   }`}
                 >
                   {item.label}
@@ -132,13 +132,13 @@ export default function Navbar() {
                 initial={{ opacity: 0 }}
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.3 }}
-                className="pt-8 flex flex-col gap-4 mt-auto border-t border-[#E5E5E3]/50"
+                className="pt-8 flex flex-col gap-4 mt-auto border-t border-[#26173B]"
               >
                 <a
                   href={personalInfo.cvUrl || '#'}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center justify-center gap-2 text-sm font-medium text-[#71717A] py-3 rounded-md border border-[#E5E5E3]"
+                  className="flex items-center justify-center gap-2 text-sm font-medium text-[#A1A1AA] py-3 rounded-md border border-[#26173B]"
                 >
                   <Download className="w-4 h-4" />
                   Download CV

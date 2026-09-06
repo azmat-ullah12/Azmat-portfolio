@@ -5,15 +5,15 @@ import { achievements } from '@/data/profile';
 
 export default function Achievements() {
   return (
-    <section id="achievements" className="section-padding bg-white">
+    <section id="achievements" className="section-padding bg-[#0D0717]">
       <div className="section-narrow">
         <AnimatedSection>
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-sm font-heading font-bold text-[#7C3AED]">11</span>
-            <div className="h-px w-12 bg-[#7C3AED]/30"></div>
-            <span className="text-sm font-heading tracking-widest uppercase text-[#71717A]">Achievements</span>
+            <span className="text-sm font-heading font-bold text-[#8B5CF6]">11</span>
+            <div className="h-px w-12 bg-[#8B5CF6]/30"></div>
+            <span className="text-sm font-heading tracking-widest uppercase text-[#A78BFA]">Achievements</span>
           </div>
-          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-14 text-[#101114]">
+          <h2 className="font-heading text-3xl md:text-4xl font-bold mb-14 text-white">
             Recognition & milestones.
           </h2>
         </AnimatedSection>
@@ -24,16 +24,16 @@ export default function Achievements() {
             
             return (
               <AnimatedSection key={index} delay={index * 0.1}>
-                <div className="py-8 border-b border-[#E5E5E3]/40 last:border-0">
-                  {isGold && <div className="w-8 h-1 bg-[#7C3AED] rounded-full mb-4"></div>}
-                  <h3 className={`font-heading font-bold text-[#101114] mb-2 ${isGold ? 'text-3xl md:text-4xl' : 'text-2xl'}`}>
+                <div className="py-8 border-b border-[#26173B] last:border-0">
+                  {isGold && <div className="w-8 h-1 bg-[#8B5CF6] shadow-[0_0_12px_#8B5CF6] rounded-full mb-4"></div>}
+                  <h3 className={`font-heading font-bold text-white mb-2 ${isGold ? 'text-3xl md:text-4xl' : 'text-2xl'}`}>
                     {achievement.title}
                   </h3>
                   {achievement.description && (
-                    <p className="text-lg text-[#71717A] mb-2">{achievement.description}</p>
+                    <p className="text-lg text-[#A1A1AA] mb-2">{achievement.description}</p>
                   )}
                   {achievement.detail && (
-                    <p className="text-sm text-[#71717A]/60">{achievement.detail}</p>
+                    <p className="text-sm text-[#A1A1AA]/60">{achievement.detail}</p>
                   )}
                 </div>
               </AnimatedSection>
