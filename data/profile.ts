@@ -15,6 +15,7 @@ export interface ProfileLinks {
   fiverr: string;
   cwi: string;
   portfolio: string;
+  ebay: string;
 }
 
 export interface Stat {
@@ -106,6 +107,42 @@ export interface Language {
   level: string;
 }
 
+export interface FreelancePlatform {
+  name: string;
+  role: string;
+  description: string;
+  url: string;
+  badge?: string;
+  platformId: 'fiverr' | 'upwork' | 'ebay';
+}
+
+export const freelancePlatforms: FreelancePlatform[] = [
+  {
+    name: 'Fiverr Profile',
+    role: 'Virtual Assistant & Excel Specialist',
+    description: 'Providing professional data virtual assistant, research assistance, and administrative support services.',
+    url: 'https://www.fiverr.com/azmatazu/buying',
+    badge: 'Fiverr Client & Buyer Profile',
+    platformId: 'fiverr',
+  },
+  {
+    name: 'Upwork Profile',
+    role: 'Research & Data Virtual Assistant',
+    description: 'Available for long-term and short-term freelancing contracts in web research, data management, and coordination.',
+    url: 'https://www.upwork.com/nx/client/dashboard/',
+    badge: 'Upwork Workspace & Dashboard',
+    platformId: 'upwork',
+  },
+  {
+    name: 'eBay Storefront',
+    role: 'Merchant & Digital Seller',
+    description: 'Active e-commerce merchant store featuring specialized products and digital store listings.',
+    url: 'https://www.ebay.com/sch/axm_2431/m.html?item=800396158368&rt=nc&_trksid=p4429486.m3561.l161211',
+    badge: 'eBay Seller Storefront',
+    platformId: 'ebay',
+  },
+];
+
 // ─── Social & Contact Links ─────────────────────────
 // Add your actual profile URLs here when ready.
 // Leave empty strings as placeholders.
@@ -115,10 +152,11 @@ export const profileLinks: ProfileLinks = {
   researchgate: 'https://www.researchgate.net/profile/Azmat-Ullah-32',
   googleScholar: 'https://g.co/kgs/9cKg2UU',
   orcid: 'https://orcid.org/0009-0006-6241-7241',
-  upwork: '',
-  fiverr: '',
+  upwork: 'https://www.upwork.com/nx/client/dashboard/',
+  fiverr: 'https://www.fiverr.com/azmatazu/buying',
   cwi: 'https://www.cyberworldinsight.com/author/axmtbrzgmail-com/',
   portfolio: 'https://drive.google.com/file/d/1hEe-xWUNG7n1rvas2sQwmzU3UEEZovZX/view?usp=sharing',
+  ebay: 'https://www.ebay.com/sch/axm_2431/m.html?item=800396158368&rt=nc&_trksid=p4429486.m3561.l161211',
 };
 
 // ─── Personal Information ───────────────────────────

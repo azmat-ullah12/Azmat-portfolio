@@ -8,6 +8,7 @@ import Blogs from '@/components/sections/Blogs';
 import Projects from '@/components/sections/Projects';
 import CreativePortfolio from '@/components/sections/CreativePortfolio';
 import Skills from '@/components/sections/Skills';
+import FreelanceMarketplaces from '@/components/sections/FreelanceMarketplaces';
 import Education from '@/components/sections/Education';
 import Achievements from '@/components/sections/Achievements';
 import Internships from '@/components/sections/Internships';
@@ -29,6 +30,7 @@ export default function Home() {
         <Projects />
         <CreativePortfolio />
         <Skills />
+        <FreelanceMarketplaces />
         <Education />
         <Achievements />
         <Internships />

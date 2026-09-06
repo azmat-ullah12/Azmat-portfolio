@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { ArrowRight, Linkedin, BookOpen, GraduationCap, Globe, Briefcase, Mail } from 'lucide-react';
+import { ArrowRight, Linkedin, BookOpen, GraduationCap, Globe, Briefcase, Mail, ShoppingBag } from 'lucide-react';
 import { personalInfo, profileLinks } from '@/data/profile';
 
 const socialItems = [
@@ -11,6 +11,7 @@ const socialItems = [
   { name: 'ORCID', icon: Globe, url: profileLinks.orcid },
   { name: 'Upwork', icon: Briefcase, url: profileLinks.upwork },
   { name: 'Fiverr', icon: Briefcase, url: profileLinks.fiverr },
+  { name: 'eBay', icon: ShoppingBag, url: profileLinks.ebay },
   { name: 'Cyber World Insight', icon: Globe, url: profileLinks.cwi },
   { name: 'Portfolio', icon: BookOpen, url: profileLinks.portfolio },
 ];

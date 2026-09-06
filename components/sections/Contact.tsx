@@ -2,7 +2,7 @@
 
 import AnimatedSection from '@/components/ui/AnimatedSection';
 import { profileLinks, personalInfo } from '@/data/profile';
-import { Mail, Github, Linkedin, Twitter, ArrowRight, Download, BookOpen, GraduationCap, Globe, Briefcase } from 'lucide-react';
+import { Mail, Github, Linkedin, Twitter, ArrowRight, Download, BookOpen, GraduationCap, Globe, Briefcase, ShoppingBag } from 'lucide-react';
 
 export default function Contact() {
   return (
@@ -62,6 +62,7 @@ export default function Contact() {
                   { name: 'ORCID', icon: Globe, url: profileLinks.orcid },
                   { name: 'Upwork', icon: Briefcase, url: profileLinks.upwork },
                   { name: 'Fiverr', icon: Briefcase, url: profileLinks.fiverr },
+                  { name: 'eBay Storefront', icon: ShoppingBag, url: profileLinks.ebay },
                   { name: 'Cyber World Insight', icon: Globe, url: profileLinks.cwi },
                   { name: 'Portfolio', icon: BookOpen, url: profileLinks.portfolio },
                 ].map((link) => {
