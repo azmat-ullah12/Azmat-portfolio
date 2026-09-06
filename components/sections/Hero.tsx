@@ -70,7 +70,7 @@ export default function Hero() {
 
               {/* Floating WhatsApp Badge */}
               <motion.a
-                href="https://wa.me/923454050692"
+                href="https://api.whatsapp.com/send?phone=923454050692&text=Hello%20Azmat,%20I%20saw%20your%20portfolio%20website%20and%20would%20like%20to%20connect."
                 target="_blank"
                 rel="noopener noreferrer"
                 aria-label="Chat on WhatsApp — Available for work"
