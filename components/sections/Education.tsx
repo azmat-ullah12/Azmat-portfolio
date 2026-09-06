@@ -9,7 +9,7 @@ export default function Education() {
       <div className="section-narrow">
         <AnimatedSection>
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-sm font-heading font-bold text-[#7C3AED]">09</span>
+            <span className="text-sm font-heading font-bold text-[#7C3AED]">10</span>
             <div className="h-px w-12 bg-[#7C3AED]/30"></div>
             <span className="text-sm font-heading tracking-widest uppercase text-[#71717A]">Education</span>
           </div>
