@@ -49,12 +49,8 @@ export default function CreativePortfolio() {
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
           {filteredItems.map((item, index) => {
             const isFirst = index === 0;
-            return (
-              <AnimatedSection
-                key={index}
-                delay={index * 0.1}
-                className={`group rounded-xl overflow-hidden flex flex-col bg-[#160D24] border border-[#26173B] hover:border-[#8B5CF6]/40 transition-all duration-300 ${isFirst ? 'sm:col-span-2' : ''}`}
-              >
+            const CardBody = (
+              <>
                 <div className={`w-full bg-[#130A21] overflow-hidden flex items-center justify-center ${isFirst ? 'aspect-[16/9] md:aspect-[21/9]' : 'aspect-[4/3]'}`}>
                   {item.image ? (
                     <img 
@@ -69,19 +65,49 @@ export default function CreativePortfolio() {
                   )}
                 </div>
                 
-                <div className="p-5">
-                  <div className="text-[11px] uppercase tracking-wider text-[#8B5CF6] font-medium mb-1.5">
-                    {item.category}
+                <div className="p-5 flex-1 flex flex-col justify-between">
+                  <div>
+                    <div className="text-[11px] uppercase tracking-wider text-[#8B5CF6] font-medium mb-1.5 flex items-center justify-between">
+                      <span>{item.category}</span>
+                      {item.link && (
+                        <span className="text-xs text-[#8B5CF6] opacity-0 group-hover:opacity-100 transition-opacity">
+                          ↗
+                        </span>
+                      )}
+                    </div>
+                    <h3 className="font-heading text-sm md:text-base font-semibold text-white mb-1 group-hover:text-[#A78BFA] transition-colors">
+                      {item.title}
+                    </h3>
+                    {item.description && (
+                      <p className="text-[13px] text-[#A1A1AA] line-clamp-2">
+                        {item.description}
+                      </p>
+                    )}
                   </div>
-                  <h3 className="font-heading text-sm md:text-base font-semibold text-white mb-1">
-                    {item.title}
-                  </h3>
-                  {item.description && (
-                    <p className="text-[13px] text-[#A1A1AA] line-clamp-2">
-                      {item.description}
-                    </p>
-                  )}
                 </div>
+              </>
+            );
+
+            return (
+              <AnimatedSection
+                key={index}
+                delay={index * 0.1}
+                className={`group rounded-xl overflow-hidden bg-[#160D24] border border-[#26173B] hover:border-[#8B5CF6]/50 hover:shadow-[0_0_20px_-5px_rgba(139,92,246,0.3)] transition-all duration-300 ${isFirst ? 'sm:col-span-2' : ''}`}
+              >
+                {item.link ? (
+                  <a
+                    href={item.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex flex-col h-full cursor-pointer"
+                  >
+                    {CardBody}
+                  </a>
+                ) : (
+                  <div className="flex flex-col h-full">
+                    {CardBody}
+                  </div>
+                )}
               </AnimatedSection>
             );
           })}

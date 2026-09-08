@@ -20,22 +20,44 @@ export default function Certifications() {
         </AnimatedSection>
 
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-4">
-          {certifications.map((cert, index) => (
-            <AnimatedSection key={index} delay={index * 0.1}>
-              <div
-                className="block bg-[#160D24] border border-[#26173B] rounded-xl overflow-hidden group hover:border-[#8B5CF6]/40 hover:bg-[#1D1231] transition-all duration-300 shadow-[0_0_20px_-5px_rgba(124,58,237,0.1)]"
-              >
-                <div className="aspect-[3/2] bg-[#130A21] flex items-center justify-center">
-                  <FileText className="w-12 h-12 text-[#A1A1AA]/20 group-hover:text-[#8B5CF6]/40 transition-colors" />
+          {certifications.map((cert, index) => {
+            const CardContent = (
+              <div className="bg-[#160D24] border border-[#26173B] rounded-xl overflow-hidden group-hover:border-[#8B5CF6]/50 group-hover:bg-[#1D1231] transition-all duration-300 shadow-[0_0_20px_-5px_rgba(124,58,237,0.1)] group-hover:shadow-[0_0_20px_-5px_rgba(139,92,246,0.3)] h-full flex flex-col">
+                <div className="aspect-[3/2] bg-[#130A21] flex items-center justify-center relative overflow-hidden">
+                  <FileText className="w-12 h-12 text-[#A1A1AA]/20 group-hover:text-[#8B5CF6]/60 group-hover:scale-110 transition-all duration-300" />
+                  {cert.link && (
+                    <span className="absolute top-2 right-2 text-xs text-[#8B5CF6] opacity-0 group-hover:opacity-100 transition-opacity bg-[#160D24]/80 px-1.5 py-0.5 rounded">
+                      ↗
+                    </span>
+                  )}
                 </div>
-                <div className="p-4">
+                <div className="p-4 flex-1 flex flex-col justify-between">
                   <h3 className="text-[13px] font-medium text-white group-hover:text-[#A78BFA] transition-colors leading-snug line-clamp-2">
                     {cert.title}
                   </h3>
                 </div>
               </div>
-            </AnimatedSection>
-          ))}
+            );
+
+            return (
+              <AnimatedSection key={index} delay={index * 0.1}>
+                {cert.link ? (
+                  <a
+                    href={cert.link}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="block group cursor-pointer h-full"
+                  >
+                    {CardContent}
+                  </a>
+                ) : (
+                  <div className="block group h-full">
+                    {CardContent}
+                  </div>
+                )}
+              </AnimatedSection>
+            );
+          })}
         </div>
       </div>
     </section>

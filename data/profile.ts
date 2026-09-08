@@ -53,6 +53,7 @@ export interface BlogPost {
   publication?: string;
   year: string;
   type?: string;
+  link?: string;
 }
 
 export interface Project {
@@ -94,6 +95,7 @@ export interface Internship {
 export interface Certification {
   title: string;
   image?: string;
+  link?: string;
 }
 
 export interface Presentation {
@@ -359,16 +361,19 @@ export const blogPosts: BlogPost[] = [
     publication: 'Cyber World Insight',
     year: '2025',
     type: 'article',
+    link: 'https://www.cyberworldinsight.com/emerging-technologies/education-for-sustainable-development-shaping-future-generations/',
   },
   {
     title: 'The Future of Digital Rights in Pakistan – Youth Perspectives',
     year: '2025',
     type: 'article',
+    link: 'https://share.google/PFqoSU6mzckcwVH6Y',
   },
   {
     title: 'AI and Democracy in the Digital Age: Opportunities and Threats',
     year: '2025',
     type: 'article',
+    link: 'https://share.google/3prqfWjFXLFqmETv2',
   },
   {
     title:
@@ -376,6 +381,7 @@ export const blogPosts: BlogPost[] = [
     publication: 'Magazine',
     year: '2025',
     type: 'magazine',
+    link: 'https://www.cyberworldinsight.com/magazine/',
   },
 ];
 
@@ -423,46 +429,50 @@ export const projects: Project[] = [
 
 export const portfolioItems: PortfolioItem[] = [
   {
-    title: 'Coming Soon',
-    category: 'Graphic Design',
-    image: '',
-    description: 'Graphic design work will be uploaded soon.',
-    tools: [],
-  },
-  {
-    title: 'Coming Soon',
-    category: 'Video Editing',
-    image: '',
-    description: 'Video editing projects will be uploaded soon.',
-    tools: [],
-  },
-  {
-    title: 'Coming Soon',
-    category: 'AI Video',
-    image: '',
-    description: 'AI-generated video content will be uploaded soon.',
-    tools: [],
-  },
-  {
-    title: 'Coming Soon',
-    category: 'Social Media',
-    image: '',
-    description: 'Social media campaigns and content will be uploaded soon.',
-    tools: [],
-  },
-  {
-    title: 'Coming Soon',
-    category: 'Presentations',
-    image: '',
-    description: 'Presentation designs will be uploaded soon.',
-    tools: [],
-  },
-  {
-    title: 'Coming Soon',
+    title: 'Research Portfolio',
     category: 'Research',
-    image: '',
-    description: 'Research-related visual content will be uploaded soon.',
-    tools: [],
+    image: '/images/portfolio-research.jpg',
+    description: 'Research publications, methodology, and academic contributions.',
+    tools: ['ResearchGate', 'Academic Writing', 'SPSS'],
+    link: 'https://www.researchgate.net/profile/Azmat-Ullah-32',
+  },
+  {
+    title: 'Graphic Design',
+    category: 'Graphic Design',
+    image: '/images/portfolio-graphic.jpg',
+    description: 'Visual communication, posters, and graphic design portfolio.',
+    tools: ['Canva', 'Graphic Design', 'Visual Arts'],
+    link: 'https://drive.google.com/drive/folders/11EXFnkKL8ZbSgHol5faidz5uT_2w1ilo?usp=sharing',
+  },
+  {
+    title: 'AI Video Projects',
+    category: 'AI Video',
+    image: '/images/portfolio-aivideo.jpg',
+    description: 'AI-assisted video generation, synthesis, and creative media.',
+    tools: ['AI Video', 'Generative AI', 'Content Creation'],
+    link: 'https://drive.google.com/drive/folders/1EcHBM6z66ZjJv6cCNRs7nKVR-66DDxDK?usp=sharing',
+  },
+  {
+    title: 'Video Editing',
+    category: 'Video Editing',
+    image: '/images/portfolio-videoediting.jpg',
+    description: 'Professional video editing, trimming, and multimedia production.',
+    tools: ['Video Editing', 'Post-Production', 'Multimedia'],
+    link: 'https://drive.google.com/drive/folders/1h59gnu-J6TTx5h8MVJ-ZO1IAlDhvW-0A?usp=sharing',
+  },
+  {
+    title: 'Social Media Management',
+    category: 'Social Media',
+    image: '/images/portfolio-social.jpg',
+    description: 'Social media campaigns, content strategy, and brand outreach.',
+    tools: ['Social Media', 'Content Planning', 'Awareness'],
+  },
+  {
+    title: 'Presentation Design',
+    category: 'Presentations',
+    image: '/images/portfolio-presentation.jpg',
+    description: 'Slide deck design, research proposals, and public speaking visuals.',
+    tools: ['PowerPoint', 'Presentation Design', 'Public Speaking'],
   },
 ];
 
@@ -495,6 +505,7 @@ export const skillCategories: SkillCategory[] = [
   {
     name: 'Data & Excel',
     skills: [
+      'Power BI',
       'Microsoft Excel',
       'Google Sheets',
       'Data Cleaning',
@@ -647,17 +658,40 @@ export const internships: Internship[] = [
 ];
 
 // ─── Certifications ─────────────────────────────────
-// Add image paths when certificate images are uploaded.
 
 export const certifications: Certification[] = [
-  { title: 'Assessment in Higher Education: Professional Development for Teachers' },
-  { title: 'Understanding Research Methods' },
-  { title: 'The World of Classroom Assessment and Testing' },
-  { title: 'Statistical Analysis of Data for Researchers' },
-  { title: 'Content That Connects' },
-  { title: 'National Summer School on Social Justice and Climate Change' },
-  { title: 'National Conference on Literature, Culture and Climate' },
-  { title: 'Virtual Training on Sustainable Development Goals' },
+  {
+    title: 'Assessment in Higher Education: Professional Development for Teachers',
+    link: 'https://drive.google.com/file/d/1QuHtA9WtbgCBKm3T2h8pc8aSTHW3kTaD/view?usp=sharing',
+  },
+  {
+    title: 'Understanding Research Methods',
+    link: 'https://drive.google.com/file/d/1Jh_4eVyQ3uflcG4t2dVFV3kSyG7JxaBG/view?usp=sharing',
+  },
+  {
+    title: 'The World of Classroom Assessment and Testing',
+    link: 'https://drive.google.com/file/d/1fIczlQZeEFRdoZDyg8oVN7_SuiCYLPtj/view?usp=sharing',
+  },
+  {
+    title: 'Statistical Analysis of Data for Researchers',
+    link: 'https://drive.google.com/file/d/151EdU_vGopGJzjui3wskH7cBdJ6NZmt4/view?usp=sharing',
+  },
+  {
+    title: 'Content That Connects',
+    link: 'https://drive.google.com/file/d/1ZPAi5A15M2OrYZc4VM7FEem4bQtDRfah/view?usp=sharing',
+  },
+  {
+    title: 'National Summer School on Social Justice and Climate Change',
+    link: 'https://drive.google.com/file/d/1v7wGfkzRToVsugkd59pSPD66phRv0C1B/view?usp=sharing',
+  },
+  {
+    title: 'National Conference on Literature, Culture and Climate',
+    link: 'https://drive.google.com/file/d/1CKz1mLCZAsOw-2OcMFofqa4tv6RkfWbg/view?usp=sharing',
+  },
+  {
+    title: 'Virtual Training on Sustainable Development Goals',
+    link: 'https://drive.google.com/file/d/1yGQmpMAo1iFx01bmiMypOkl6JrBYG_cS/view?usp=sharing',
+  },
 ];
 
 // ─── Presentations ──────────────────────────────────

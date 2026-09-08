@@ -25,32 +25,64 @@ export default function Blogs() {
             <AnimatedSection
               key={index}
               delay={index * 0.1}
-              className="group border-b border-[#26173B] py-6 hover:bg-[#160D24] -mx-4 px-4 transition-colors duration-300 rounded-lg cursor-default"
+              className="group border-b border-[#26173B] py-6 hover:bg-[#160D24] -mx-4 px-4 transition-colors duration-300 rounded-lg"
             >
-              <div className="block cursor-default">
-                <div className="grid md:grid-cols-[80px_1fr_auto] gap-4 items-center">
-                  <div className="text-sm text-[#A1A1AA] font-medium">
-                    {post.year}
+              {post.link ? (
+                <a
+                  href={post.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block cursor-pointer"
+                >
+                  <div className="grid md:grid-cols-[80px_1fr_auto] gap-4 items-center">
+                    <div className="text-sm text-[#A1A1AA] font-medium">
+                      {post.year}
+                    </div>
+                    <div>
+                      <h4 className="font-heading text-base md:text-lg font-semibold group-hover:text-[#A78BFA] transition-colors text-white">
+                        {post.title}
+                      </h4>
+                      {post.publication && (
+                        <div className="text-sm text-[#A1A1AA] mt-1">
+                          {post.publication}
+                        </div>
+                      )}
+                    </div>
+                    <div>
+                      {post.type === 'magazine' && (
+                        <span className="inline-block text-[10px] uppercase tracking-wider bg-[#7C3AED]/20 text-[#A78BFA] border border-[#7C3AED]/30 rounded-md px-2.5 py-0.5 font-medium">
+                          Magazine
+                        </span>
+                      )}
+                    </div>
                   </div>
-                  <div>
-                    <h4 className="font-heading text-base md:text-lg font-semibold group-hover:text-[#A78BFA] transition-colors text-white">
-                      {post.title}
-                    </h4>
-                    {post.publication && (
-                      <div className="text-sm text-[#A1A1AA] mt-1">
-                        {post.publication}
-                      </div>
-                    )}
-                  </div>
-                  <div>
-                    {post.type === 'magazine' && (
-                      <span className="inline-block text-[10px] uppercase tracking-wider bg-[#7C3AED]/20 text-[#A78BFA] border border-[#7C3AED]/30 rounded-md px-2.5 py-0.5 font-medium">
-                        Magazine
-                      </span>
-                    )}
+                </a>
+              ) : (
+                <div className="block">
+                  <div className="grid md:grid-cols-[80px_1fr_auto] gap-4 items-center">
+                    <div className="text-sm text-[#A1A1AA] font-medium">
+                      {post.year}
+                    </div>
+                    <div>
+                      <h4 className="font-heading text-base md:text-lg font-semibold text-white">
+                        {post.title}
+                      </h4>
+                      {post.publication && (
+                        <div className="text-sm text-[#A1A1AA] mt-1">
+                          {post.publication}
+                        </div>
+                      )}
+                    </div>
+                    <div>
+                      {post.type === 'magazine' && (
+                        <span className="inline-block text-[10px] uppercase tracking-wider bg-[#7C3AED]/20 text-[#A78BFA] border border-[#7C3AED]/30 rounded-md px-2.5 py-0.5 font-medium">
+                          Magazine
+                        </span>
+                      )}
+                    </div>
                   </div>
                 </div>
-              </div>
+              )}
             </AnimatedSection>
           ))}
         </div>

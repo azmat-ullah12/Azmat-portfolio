@@ -3,6 +3,7 @@ import Footer from '@/components/layout/Footer';
 import Hero from '@/components/sections/Hero';
 import About from '@/components/sections/About';
 import Experience from '@/components/sections/Experience';
+import Recommendations from '@/components/sections/Recommendations';
 import Research from '@/components/sections/Research';
 import Blogs from '@/components/sections/Blogs';
 import Projects from '@/components/sections/Projects';
@@ -25,6 +26,7 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
+        <Recommendations />
         <Research />
         <Blogs />
         <Projects />

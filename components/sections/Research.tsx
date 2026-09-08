@@ -18,7 +18,7 @@ export default function Research() {
             <span className="text-[11px] uppercase tracking-[0.25em] text-[#A78BFA] font-medium">Research & Publications</span>
           </div>
           <h2 className="font-heading text-3xl md:text-4xl lg:text-[2.75rem] font-bold mb-16 text-white">
-            Academic & clinical research.
+            Academic & educational research.
           </h2>
         </AnimatedSection>
 
@@ -29,7 +29,18 @@ export default function Research() {
                 Featured Research
               </span>
               <h3 className="text-2xl md:text-3xl font-bold text-white leading-snug mb-4">
-                {featured.title}
+                {featured.doi ? (
+                  <a
+                    href={featured.doi}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:text-[#A78BFA] transition-colors"
+                  >
+                    {featured.title}
+                  </a>
+                ) : (
+                  featured.title
+                )}
               </h3>
               <p className="text-[#A1A1AA] mb-8 max-w-2xl">
                 {featured.authors}
@@ -60,8 +71,19 @@ export default function Research() {
                   {pub.year}
                 </div>
                 <div>
-                  <h4 className="font-heading text-base md:text-lg font-semibold group-hover:text-[#A78BFA] transition-colors text-white">
-                    {pub.title}
+                  <h4 className="font-heading text-base md:text-lg font-semibold text-white">
+                    {pub.doi ? (
+                      <a
+                        href={pub.doi}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-[#A78BFA] transition-colors"
+                      >
+                        {pub.title}
+                      </a>
+                    ) : (
+                      pub.title
+                    )}
                   </h4>
                   <div className="text-sm text-[#A1A1AA] mt-2">
                     {pub.authors}
