@@ -64,6 +64,7 @@ export interface Project {
   responsibilities: string[];
   status?: string;
   link?: string;
+  image?: string;
 }
 
 export interface PortfolioItem {
@@ -403,6 +404,7 @@ export const projects: Project[] = [
       'Student Development',
       'Online Education',
     ],
+    image: '/images/project-dlsei.jpg',
     link: 'https://drive.google.com/file/d/1eI3UBWcOZ9yZukvqstocWKkD-KX3LAM_/view?usp=sharing',
   },
   {
@@ -414,6 +416,7 @@ export const projects: Project[] = [
       'Report writing',
       'Data analysis',
     ],
+    image: '/images/project-gender.jpg',
     link: 'https://drive.google.com/file/d/1YzCfnk0aFkivsZ6tmRVb-ADcG50yiqMK/view?usp=sharing',
   },
   {
@@ -425,6 +428,7 @@ export const projects: Project[] = [
       'Team leadership',
       'Research presentation',
     ],
+    image: '/images/project-careerfair.jpg',
     link: 'https://drive.google.com/file/d/18dQdeJD53tIcbxgvNtUivvTr-et5G8m0/view?usp=sharing',
   },
   {
@@ -439,6 +443,7 @@ export const projects: Project[] = [
       'Expert coordination',
       'Training delivery',
     ],
+    image: '/images/project-teachertraining.jpg',
     link: 'https://drive.google.com/file/d/1XTZvclr5I-GONd8AnXNOEoFfVyjCm2WV/view?usp=sharing',
   },
 ];
@@ -465,12 +470,12 @@ export const portfolioItems: PortfolioItem[] = [
     link: 'https://drive.google.com/drive/folders/11EXFnkKL8ZbSgHol5faidz5uT_2w1ilo?usp=sharing',
   },
   {
-    title: 'AI Editing',
+    title: 'AI Video Projects',
     category: 'AI Video',
     image: '/images/portfolio-aivideo.jpg',
     description: 'AI-assisted video generation, synthesis, and creative media editing.',
-    tools: ['AI Editing', 'Generative AI', 'Content Creation'],
-    link: 'https://drive.google.com/file/d/1ouEXx9BTycrlvrOH_r-soyr96v2ZNdwN/view?usp=sharing',
+    tools: ['AI Video', 'Generative AI', 'Content Creation'],
+    link: 'https://drive.google.com/drive/folders/1EcHBM6z66ZjJv6cCNRs7nKVR-66DDxDK?usp=sharing',
   },
   {
     title: 'Video Editing',
@@ -478,7 +483,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: '/images/portfolio-videoediting.jpg',
     description: 'Professional video editing, trimming, and multimedia production.',
     tools: ['Video Editing', 'Post-Production', 'Multimedia'],
-    link: 'https://drive.google.com/file/d/1XPClGQcNIcRwDl1iDbIf36QSp--9pqAJ/view?usp=sharing',
+    link: 'https://drive.google.com/drive/folders/1h59gnu-J6TTx5h8MVJ-ZO1IAlDhvW-0A?usp=drive_link',
   },
   {
     title: 'Social Media Management',
@@ -682,34 +687,42 @@ export const internships: Internship[] = [
 export const certifications: Certification[] = [
   {
     title: 'Assessment in Higher Education: Professional Development for Teachers',
+    image: '/images/cert-1.jpg',
     link: 'https://drive.google.com/file/d/1QuHtA9WtbgCBKm3T2h8pc8aSTHW3kTaD/view?usp=sharing',
   },
   {
     title: 'Understanding Research Methods',
+    image: '/images/cert-2.jpg',
     link: 'https://drive.google.com/file/d/1Jh_4eVyQ3uflcG4t2dVFV3kSyG7JxaBG/view?usp=sharing',
   },
   {
     title: 'The World of Classroom Assessment and Testing',
+    image: '/images/cert-3.jpg',
     link: 'https://drive.google.com/file/d/1fIczlQZeEFRdoZDyg8oVN7_SuiCYLPtj/view?usp=sharing',
   },
   {
     title: 'Statistical Analysis of Data for Researchers',
+    image: '/images/cert-4.jpg',
     link: 'https://drive.google.com/file/d/151EdU_vGopGJzjui3wskH7cBdJ6NZmt4/view?usp=sharing',
   },
   {
     title: 'Content That Connects',
+    image: '/images/cert-5.jpg',
     link: 'https://drive.google.com/file/d/1ZPAi5A15M2OrYZc4VM7FEem4bQtDRfah/view?usp=sharing',
   },
   {
     title: 'National Summer School on Social Justice and Climate Change',
+    image: '/images/cert-6.jpg',
     link: 'https://drive.google.com/file/d/1v7wGfkzRToVsugkd59pSPD66phRv0C1B/view?usp=sharing',
   },
   {
     title: 'National Conference on Literature, Culture and Climate',
+    image: '/images/cert-7.jpg',
     link: 'https://drive.google.com/file/d/1CKz1mLCZAsOw-2OcMFofqa4tv6RkfWbg/view?usp=sharing',
   },
   {
     title: 'Virtual Training on Sustainable Development Goals',
+    image: '/images/cert-8.jpg',
     link: 'https://drive.google.com/file/d/1yGQmpMAo1iFx01bmiMypOkl6JrBYG_cS/view?usp=sharing',
   },
 ];

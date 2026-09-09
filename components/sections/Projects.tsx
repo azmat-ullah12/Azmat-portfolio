@@ -22,19 +22,6 @@ export default function Projects() {
 
         <div className="flex flex-col">
           {projects.map((project, index) => {
-            const CardVisual = (
-              <div className="aspect-[16/9] w-full bg-[#130A21] border border-[#26173B] group-hover:border-[#8B5CF6]/50 rounded-xl flex flex-col items-center justify-center mt-8 overflow-hidden group shadow-[0_0_30px_-5px_rgba(124,58,237,0.15)] transition-all duration-500 relative">
-                <span className="text-2xl md:text-4xl font-heading font-bold text-white/10 group-hover:text-[#8B5CF6]/30 uppercase tracking-widest text-center px-4 group-hover:scale-105 transition-all duration-700">
-                  {project.title}
-                </span>
-                {project.link && (
-                  <span className="mt-4 text-xs font-medium text-[#8B5CF6] bg-[#160D24]/90 px-4 py-2 rounded-lg border border-[#26173B] group-hover:border-[#8B5CF6]/40 group-hover:text-white transition-all duration-300 flex items-center gap-1.5">
-                    View Project Document ↗
-                  </span>
-                )}
-              </div>
-            );
-
             return (
               <AnimatedSection
                 key={index}
@@ -52,22 +39,9 @@ export default function Projects() {
                   )}
                 </div>
                 
-                {project.link ? (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="group block"
-                  >
-                    <h3 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.08] mb-4 text-white group-hover:text-[#A78BFA] transition-colors">
-                      {project.title} <span className="inline-block text-[#8B5CF6] opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all">↗</span>
-                    </h3>
-                  </a>
-                ) : (
-                  <h3 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.08] mb-4 text-white">
-                    {project.title}
-                  </h3>
-                )}
+                <h3 className="font-heading text-3xl md:text-4xl lg:text-5xl font-bold leading-[1.08] mb-4 text-white">
+                  {project.title}
+                </h3>
                 
                 {project.subtitle && (
                   <div className="text-[#A78BFA] text-base mb-3 font-medium">
@@ -97,18 +71,20 @@ export default function Projects() {
                   </div>
                 )}
 
-                {project.link ? (
-                  <a
-                    href={project.link}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="block group"
-                  >
-                    {CardVisual}
-                  </a>
-                ) : (
-                  CardVisual
-                )}
+                {/* Visible Document Preview (Not Clickable) */}
+                <div className="w-full mt-6 overflow-hidden rounded-xl border border-[#26173B] bg-[#130A21] shadow-[0_0_30px_-5px_rgba(124,58,237,0.15)] max-w-4xl">
+                  {project.image ? (
+                    <img 
+                      src={project.image} 
+                      alt={project.title}
+                      className="w-full h-auto object-cover rounded-xl"
+                    />
+                  ) : (
+                    <div className="aspect-[16/9] w-full flex items-center justify-center p-8 text-center text-[#A1A1AA]/30">
+                      <span className="text-xl font-heading font-bold uppercase tracking-widest">{project.title}</span>
+                    </div>
+                  )}
+                </div>
               </AnimatedSection>
             );
           })}

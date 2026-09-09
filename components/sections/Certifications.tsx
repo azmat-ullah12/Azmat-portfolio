@@ -24,9 +24,17 @@ export default function Certifications() {
             const CardContent = (
               <div className="bg-[#160D24] border border-[#26173B] rounded-xl overflow-hidden group-hover:border-[#8B5CF6]/50 group-hover:bg-[#1D1231] transition-all duration-300 shadow-[0_0_20px_-5px_rgba(124,58,237,0.1)] group-hover:shadow-[0_0_20px_-5px_rgba(139,92,246,0.3)] h-full flex flex-col">
                 <div className="aspect-[3/2] bg-[#130A21] flex items-center justify-center relative overflow-hidden">
-                  <FileText className="w-12 h-12 text-[#A1A1AA]/20 group-hover:text-[#8B5CF6]/60 group-hover:scale-110 transition-all duration-300" />
+                  {cert.image ? (
+                    <img 
+                      src={cert.image} 
+                      alt={cert.title}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                    />
+                  ) : (
+                    <FileText className="w-12 h-12 text-[#A1A1AA]/20 group-hover:text-[#8B5CF6]/60 group-hover:scale-110 transition-all duration-300" />
+                  )}
                   {cert.link && (
-                    <span className="absolute top-2 right-2 text-xs text-[#8B5CF6] opacity-0 group-hover:opacity-100 transition-opacity bg-[#160D24]/80 px-1.5 py-0.5 rounded">
+                    <span className="absolute top-2 right-2 text-xs text-[#8B5CF6] opacity-0 group-hover:opacity-100 transition-opacity bg-[#160D24]/80 px-1.5 py-0.5 rounded border border-[#8B5CF6]/30">
                       ↗
                     </span>
                   )}
