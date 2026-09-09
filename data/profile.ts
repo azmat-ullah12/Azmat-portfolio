@@ -62,6 +62,8 @@ export interface Project {
   role: string;
   description?: string;
   responsibilities: string[];
+  status?: string;
+  link?: string;
 }
 
 export interface PortfolioItem {
@@ -389,6 +391,21 @@ export const blogPosts: BlogPost[] = [
 
 export const projects: Project[] = [
   {
+    title: 'HEC Digital Learning and Skills Enrichment Initiative (DLSEI)',
+    subtitle: 'Higher Education Commission',
+    role: 'Skill Development & Digital Learning Project',
+    status: 'In Progress',
+    description:
+      'A national initiative by the Higher Education Commission of Pakistan to enhance digital literacy, technical competencies, and professional skill sets for university students.',
+    responsibilities: [
+      'Digital Learning',
+      'Skill Enrichment',
+      'Student Development',
+      'Online Education',
+    ],
+    link: 'https://drive.google.com/file/d/1eI3UBWcOZ9yZukvqstocWKkD-KX3LAM_/view?usp=sharing',
+  },
+  {
     title: 'Gender Digital Divide in South Asia',
     role: 'Co-author / Research Project',
     responsibilities: [
@@ -397,6 +414,7 @@ export const projects: Project[] = [
       'Report writing',
       'Data analysis',
     ],
+    link: 'https://drive.google.com/file/d/1YzCfnk0aFkivsZ6tmRVb-ADcG50yiqMK/view?usp=sharing',
   },
   {
     title: 'Pakistan Career Fair — What Skills Do Students Want?',
@@ -407,6 +425,7 @@ export const projects: Project[] = [
       'Team leadership',
       'Research presentation',
     ],
+    link: 'https://drive.google.com/file/d/18dQdeJD53tIcbxgvNtUivvTr-et5G8m0/view?usp=sharing',
   },
   {
     title: 'Teacher Training Initiative',
@@ -420,6 +439,7 @@ export const projects: Project[] = [
       'Expert coordination',
       'Training delivery',
     ],
+    link: 'https://drive.google.com/file/d/1XTZvclr5I-GONd8AnXNOEoFfVyjCm2WV/view?usp=sharing',
   },
 ];
 
@@ -445,12 +465,12 @@ export const portfolioItems: PortfolioItem[] = [
     link: 'https://drive.google.com/drive/folders/11EXFnkKL8ZbSgHol5faidz5uT_2w1ilo?usp=sharing',
   },
   {
-    title: 'AI Video Projects',
+    title: 'AI Editing',
     category: 'AI Video',
     image: '/images/portfolio-aivideo.jpg',
-    description: 'AI-assisted video generation, synthesis, and creative media.',
-    tools: ['AI Video', 'Generative AI', 'Content Creation'],
-    link: 'https://drive.google.com/drive/folders/1EcHBM6z66ZjJv6cCNRs7nKVR-66DDxDK?usp=sharing',
+    description: 'AI-assisted video generation, synthesis, and creative media editing.',
+    tools: ['AI Editing', 'Generative AI', 'Content Creation'],
+    link: 'https://drive.google.com/file/d/1ouEXx9BTycrlvrOH_r-soyr96v2ZNdwN/view?usp=sharing',
   },
   {
     title: 'Video Editing',
@@ -458,7 +478,7 @@ export const portfolioItems: PortfolioItem[] = [
     image: '/images/portfolio-videoediting.jpg',
     description: 'Professional video editing, trimming, and multimedia production.',
     tools: ['Video Editing', 'Post-Production', 'Multimedia'],
-    link: 'https://drive.google.com/drive/folders/1h59gnu-J6TTx5h8MVJ-ZO1IAlDhvW-0A?usp=sharing',
+    link: 'https://drive.google.com/file/d/1XPClGQcNIcRwDl1iDbIf36QSp--9pqAJ/view?usp=sharing',
   },
   {
     title: 'Social Media Management',

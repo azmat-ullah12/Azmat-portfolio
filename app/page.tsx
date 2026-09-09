@@ -26,7 +26,6 @@ export default function Home() {
         <Hero />
         <About />
         <Experience />
-        <Recommendations />
         <Research />
         <Blogs />
         <Projects />
@@ -39,6 +38,7 @@ export default function Home() {
         <Certifications />
         <Presentations />
         <Languages />
+        <Recommendations />
         <Contact />
       </main>
       <Footer />

@@ -9,7 +9,7 @@ export default function Skills() {
       <div className="section-narrow">
         <AnimatedSection>
           <div className="flex items-center gap-4 mb-8">
-            <span className="text-sm font-heading font-bold text-[#8B5CF6]">08</span>
+            <span className="text-sm font-heading font-bold text-[#8B5CF6]">07</span>
             <div className="h-px w-12 bg-[#8B5CF6]/30"></div>
             <span className="text-sm font-heading tracking-widest uppercase text-[#A78BFA]">Skills & Services</span>
           </div>

@@ -21,7 +21,7 @@ export default function CreativePortfolio() {
       <div className="section-narrow">
         <AnimatedSection className="mb-12">
           <div className="flex items-center gap-4 mb-4">
-            <span className="text-sm font-semibold text-[#8B5CF6] tracking-wider">07</span>
+            <span className="text-sm font-semibold text-[#8B5CF6] tracking-wider">06</span>
             <div className="h-px bg-[#26173B] flex-1 max-w-[40px]"></div>
             <span className="text-[11px] uppercase tracking-[0.25em] text-[#A78BFA] font-medium">Creative & Digital Work</span>
           </div>
