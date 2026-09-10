@@ -470,20 +470,12 @@ export const portfolioItems: PortfolioItem[] = [
     link: 'https://drive.google.com/drive/folders/11EXFnkKL8ZbSgHol5faidz5uT_2w1ilo?usp=sharing',
   },
   {
-    title: 'AI Video Projects',
-    category: 'AI Video',
+    title: 'AI + Video Editing',
+    category: 'AI + Video Editing',
     image: '/images/portfolio-aivideo.jpg',
-    description: 'AI-assisted video generation, synthesis, and creative media editing.',
-    tools: ['AI Video', 'Generative AI', 'Content Creation'],
+    description: 'AI-assisted video generation, synthesis, and professional video editing production.',
+    tools: ['AI Video', 'Video Editing', 'Generative AI', 'Content Creation'],
     link: 'https://drive.google.com/drive/folders/1EcHBM6z66ZjJv6cCNRs7nKVR-66DDxDK?usp=sharing',
-  },
-  {
-    title: 'Video Editing',
-    category: 'Video Editing',
-    image: '/images/portfolio-videoediting.jpg',
-    description: 'Professional video editing, trimming, and multimedia production.',
-    tools: ['Video Editing', 'Post-Production', 'Multimedia'],
-    link: 'https://drive.google.com/drive/folders/1h59gnu-J6TTx5h8MVJ-ZO1IAlDhvW-0A?usp=drive_link',
   },
   {
     title: 'Social Media Management',
@@ -502,10 +494,8 @@ export const portfolioItems: PortfolioItem[] = [
 ];
 
 export const portfolioCategories: string[] = [
-  'All',
   'Graphic Design',
-  'Video Editing',
-  'AI Video',
+  'AI + Video Editing',
   'Social Media',
   'Presentations',
   'Research',

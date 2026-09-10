@@ -10,7 +10,7 @@ export default function CreativePortfolio() {
   
   if (!portfolioItems || portfolioItems.length === 0) return null;
 
-  const categories = ['All', ...portfolioCategories];
+  const categories = ['All', ...portfolioCategories.filter(c => c !== 'All')];
   
   const filteredItems = activeCategory === 'All' 
     ? portfolioItems 
