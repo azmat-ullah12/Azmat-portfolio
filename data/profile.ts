@@ -160,7 +160,7 @@ export const profileLinks: ProfileLinks = {
   upwork: 'https://www.upwork.com/nx/client/dashboard/',
   fiverr: 'https://www.fiverr.com/azmatazu/buying',
   cwi: 'https://www.cyberworldinsight.com/author/axmtbrzgmail-com/',
-  portfolio: 'https://drive.google.com/file/d/1hEe-xWUNG7n1rvas2sQwmzU3UEEZovZX/view?usp=sharing',
+  portfolio: 'https://drive.google.com/file/d/1uOZEzXBC2Liq6FAQ0XnVUnAsi7h2Yr5A/view?usp=sharing',
   ebay: 'https://www.ebay.com/sch/axm_2431/m.html?item=800396158368&rt=nc&_trksid=p4429486.m3561.l161211',
 };
 
